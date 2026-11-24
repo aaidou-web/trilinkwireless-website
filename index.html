@@ -4,11 +4,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="TriLink Wireless — Canadian connectivity, coming soon.">
+<meta name="description" content="TriLink Wireless — Canadian mobile, internet, devices and business connectivity. Coming soon.">
+<meta name="theme-color" content="#081c38">
+
 <link rel="icon" type="image/png" href="./symbol.png">
+<link rel="apple-touch-icon" href="./symbol.png">
+<link rel="canonical" href="https://www.trilinkwireless.ca/">
+
+<meta property="og:title" content="TriLink Wireless | Coming Soon">
+<meta property="og:description" content="A new way to stay connected.">
+<meta property="og:url" content="https://www.trilinkwireless.ca/">
+<meta property="og:image" content="https://www.trilinkwireless.ca/telecom.png">
+<meta property="og:type" content="website">
+
 <title>TriLink Wireless | Coming Soon</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -233,6 +245,143 @@ p {
     border-radius: 12px;
 }
 
+/* CONTACT SECTION */
+
+.contact {
+    background: #081c38;
+    color: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 48px 0;
+    scroll-margin-top: 130px;
+}
+
+.contact h2 {
+    margin-top: 0;
+}
+
+.contact p {
+    color: #dbeaff;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: 16px;
+    margin: 24px 0 32px;
+}
+
+.contact-card {
+    background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 12px;
+    padding: 22px;
+    min-width: 0;
+}
+
+.contact-card h3 {
+    margin: 0 0 12px;
+}
+
+.contact-card a {
+    overflow-wrap: anywhere;
+}
+
+.contact-button {
+    display: inline-block;
+    background: #a93620;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 650;
+    margin-top: 10px;
+}
+
+.whatsapp-button {
+    background: #087b45;
+}
+
+/* SOCIAL MEDIA */
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    color: white;
+    font-weight: 600;
+    transition: background .2s, transform .2s;
+}
+
+.social-link:hover {
+    background: rgba(255,255,255,.18);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 19px;
+    font-weight: 800;
+    color: white;
+}
+
+.tiktok {
+    background: #000000;
+}
+
+.youtube {
+    background: #ff0000;
+}
+
+.snapchat {
+    background: #fffc00;
+    color: #000000;
+}
+
+.twitter {
+    background: #000000;
+}
+
+.threads {
+    background: #111111;
+}
+
+.facebook {
+    background: #1877f2;
+}
+
+.instagram {
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
+}
+
+.whatsapp {
+    background: #087b45;
+}
+
+/* FOOTER */
+
 footer {
     border-top: 1px solid #dce5ef;
     color: #52637b;
@@ -246,6 +395,32 @@ footer {
     margin-bottom: 12px;
 }
 
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    gap: 24px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a {
+    overflow-wrap: anywhere;
+}
+
+.footer-links a:hover {
+    color: #a93620;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #dce5ef;
+}
+
 a:focus-visible,
 button:focus-visible {
     outline: 3px solid #f0a32b;
@@ -256,7 +431,9 @@ button:focus-visible {
     scroll-margin-top: 130px;
 }
 
-@media (max-width: 1050px) {
+/* TABLET AND MOBILE */
+
+@media (max-width: 1100px) {
 
     nav {
         flex-wrap: wrap;
@@ -275,6 +452,8 @@ button:focus-visible {
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+        max-height: 65vh;
+        overflow-y: auto;
     }
 
     #links.open {
@@ -334,7 +513,50 @@ button:focus-visible {
     .tile {
         padding: 22px;
     }
+
+    .contact {
+        padding: 24px;
+    }
+
+    .social-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .social-link {
+        padding: 10px;
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .social-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
 }
+
+@media (max-width: 350px) {
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+}
+
 </style>
 </head>
 
@@ -346,6 +568,7 @@ button:focus-visible {
             <img class="symbol"
                  src="./symbol.png"
                  alt="">
+
             <img class="wordmark"
                  src="./wordmark.png"
                  alt="TriLink Wireless">
@@ -370,48 +593,316 @@ button:focus-visible {
 </header>
 
 <section class="hero" id="home">
+
     <div class="hero-inner">
+
         <div>
             <span class="eyebrow" id="eyebrow"></span>
+
             <h1 id="headline"></h1>
+
             <p id="intro"></p>
-            <a class="cta" href="#services" id="cta"></a>
+
+            <a class="cta"
+               href="#services"
+               id="cta">
+            </a>
         </div>
 
         <img class="hero-logo"
              src="./telecom.png"
              alt="TriLink Wireless">
+
     </div>
+
 </section>
 
 <main>
 
     <h2 id="heading"></h2>
+
     <p id="sub"></p>
 
     <div class="grid" id="services"></div>
 
     <section class="future">
+
         <h2 id="futureTitle"></h2>
+
         <div class="grid" id="futureGrid"></div>
+
     </section>
 
     <section class="note">
+
         <h2 id="faq"></h2>
+
         <p id="answer"></p>
+
+    </section>
+
+    <!-- CONTACT US -->
+
+    <section class="contact" id="contact">
+
+        <span class="eyebrow" id="contactEyebrow"></span>
+
+        <h2 id="contactTitle"></h2>
+
+        <p id="contactIntro"></p>
+
+        <div class="contact-grid">
+
+            <article class="contact-card">
+
+                <h3 id="emailTitle"></h3>
+
+                <a href="mailto:info@trilinkwireless.ca">
+                    info@trilinkwireless.ca
+                </a>
+
+                <br>
+
+                <a class="contact-button"
+                   href="mailto:info@trilinkwireless.ca"
+                   id="emailButton">
+                </a>
+
+            </article>
+
+            <article class="contact-card">
+
+                <h3>WhatsApp</h3>
+
+                <p id="whatsappText"></p>
+
+                <a class="contact-button whatsapp-button"
+                   href="https://wa.me/16132049803"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   id="whatsappButton">
+                </a>
+
+            </article>
+
+            <article class="contact-card">
+
+                <h3 id="websiteTitle"></h3>
+
+                <a href="https://www.trilinkwireless.ca/">
+                    www.trilinkwireless.ca
+                </a>
+
+                <p>Ottawa, Ontario, Canada</p>
+
+            </article>
+
+        </div>
+
+        <h2 id="socialTitle"></h2>
+
+        <p id="socialIntro"></p>
+
+        <div class="social-grid">
+
+            <a class="social-link"
+               href="https://www.tiktok.com/@trilink.wireless"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon tiktok"
+                      aria-hidden="true">♪</span>
+
+                TikTok
+
+            </a>
+
+            <a class="social-link"
+               href="https://www.youtube.com/@Trilinkwireless"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon youtube"
+                      aria-hidden="true">▶</span>
+
+                YouTube
+
+            </a>
+
+            <a class="social-link"
+               href="https://www.snapchat.com/add/trilinkwireless?share_id=eI6JXSEPNvs&amp;locale=en-CA"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon snapchat"
+                      aria-hidden="true">S</span>
+
+                Snapchat
+
+            </a>
+
+            <a class="social-link"
+               href="https://x.com/TriLinkWireless"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon twitter"
+                      aria-hidden="true">𝕏</span>
+
+                X
+
+            </a>
+
+            <a class="social-link"
+               href="https://www.threads.com/@trilinkwireless"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon threads"
+                      aria-hidden="true">@</span>
+
+                Threads
+
+            </a>
+
+            <a class="social-link"
+               href="https://facebook.com/TriLinkWIRELESS"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon facebook"
+                      aria-hidden="true">f</span>
+
+                Facebook
+
+            </a>
+
+            <a class="social-link"
+               href="https://www.instagram.com/trilinkwireless"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon instagram"
+                      aria-hidden="true">◎</span>
+
+                Instagram
+
+            </a>
+
+            <a class="social-link"
+               href="https://wa.me/16132049803"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <span class="social-icon whatsapp"
+                      aria-hidden="true">✆</span>
+
+                WhatsApp
+
+            </a>
+
+        </div>
+
     </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-    <img class="footer-logo"
-         src="./original.png"
-         alt="TriLink Wireless">
 
-    <strong>TriLink Wireless</strong>
-    · Ottawa, Ontario, Canada
+    <div class="footer-grid">
 
-    <p id="foot"></p>
+        <div>
+
+            <img class="footer-logo"
+                 src="./original.png"
+                 alt="TriLink Wireless">
+
+            <strong>TriLink Wireless</strong>
+
+            <p>Ottawa, Ontario, Canada</p>
+
+            <p id="footerDescription"></p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <strong id="footerContact"></strong>
+
+            <a href="mailto:info@trilinkwireless.ca">
+                info@trilinkwireless.ca
+            </a>
+
+            <a href="https://www.trilinkwireless.ca/">
+                www.trilinkwireless.ca
+            </a>
+
+            <a href="https://wa.me/16132049803"
+               target="_blank"
+               rel="noopener noreferrer">
+                WhatsApp
+            </a>
+
+        </div>
+
+        <div class="footer-links">
+
+            <strong id="footerSocial"></strong>
+
+            <a href="https://www.tiktok.com/@trilink.wireless"
+               target="_blank"
+               rel="noopener noreferrer">
+                TikTok
+            </a>
+
+            <a href="https://www.youtube.com/@Trilinkwireless"
+               target="_blank"
+               rel="noopener noreferrer">
+                YouTube
+            </a>
+
+            <a href="https://www.snapchat.com/add/trilinkwireless"
+               target="_blank"
+               rel="noopener noreferrer">
+                Snapchat
+            </a>
+
+            <a href="https://x.com/TriLinkWireless"
+               target="_blank"
+               rel="noopener noreferrer">
+                X
+            </a>
+
+            <a href="https://www.threads.com/@trilinkwireless"
+               target="_blank"
+               rel="noopener noreferrer">
+                Threads
+            </a>
+
+            <a href="https://facebook.com/TriLinkWIRELESS"
+               target="_blank"
+               rel="noopener noreferrer">
+                Facebook
+            </a>
+
+            <a href="https://www.instagram.com/trilinkwireless"
+               target="_blank"
+               rel="noopener noreferrer">
+                Instagram
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p id="foot"></p>
+
+    </div>
+
 </footer>
 
 <script>
@@ -439,60 +930,186 @@ const images = [
 const data = {
 
     en: {
+
         home: 'Home',
+
+        contactNav: 'Contact Us',
+
         eyebrow: 'COMING SOON • CANADA',
+
         headline: 'A new way to stay connected.',
+
         intro: 'TriLink Wireless is preparing a new experience for mobile, internet, devices and business connectivity.',
+
         cta: 'Explore planned services',
+
         heading: 'Everything connected.',
+
         sub: 'Explore what we are working toward. All services are currently in development.',
+
         status: 'Coming soon',
+
         faq: 'When will we launch?',
+
         answer: 'Our launch date has not yet been announced. Plans, coverage, pricing and support channels will be shared when available. Orders, repairs and account registration are not open yet.',
-        foot: '© 2026 TriLink Wireless. Pre-launch information only.',
+
+        foot: '© 2026 TriLink Wireless. All rights reserved. Pre-launch information only.',
+
         futureTitle: 'Our future vision',
+
+        contactEyebrow: 'STAY CONNECTED',
+
+        contactTitle: 'Contact TriLink Wireless',
+
+        contactIntro: 'Have a question, business inquiry or partnership opportunity? Connect with us through our official communication channels.',
+
+        emailTitle: 'Email us',
+
+        emailButton: 'Send an email',
+
+        whatsappText: 'Connect with us on WhatsApp for general inquiries.',
+
+        whatsappButton: 'Message us',
+
+        websiteTitle: 'Official website',
+
+        socialTitle: 'Follow us',
+
+        socialIntro: 'Follow our official social media accounts for company news, announcements and future service updates.',
+
+        footerDescription: 'Building a new connectivity experience for Canada.',
+
+        footerContact: 'Contact information',
+
+        footerSocial: 'Social media',
+
         futureItems: [
             'TV & media',
             'AI & technology',
             'Audio & entertainment'
         ],
+
         items: [
-            ['Mobile', 'SIM cards, eSIMs and mobile plans.'],
-            ['Internet', 'Home internet and fibre options, subject to availability.'],
-            ['Business', 'Business internet and telecommunications solutions.'],
-            ['Devices', 'Phones, tablets and accessories.'],
-            ['Customer Portal', 'Manage accounts, bills and subscriptions when launched.'],
-            ['Repairs', 'Planned diagnostics and phone, tablet and computer repair services.'],
-            ['Support', 'Customer service, FAQs and contact forms are planned.']
+            [
+                'Mobile',
+                'SIM cards, eSIMs and mobile plans.'
+            ],
+            [
+                'Internet',
+                'Home internet and fibre options, subject to availability.'
+            ],
+            [
+                'Business',
+                'Business internet and telecommunications solutions.'
+            ],
+            [
+                'Devices',
+                'Phones, tablets and accessories.'
+            ],
+            [
+                'Customer Portal',
+                'Manage accounts, bills and subscriptions when launched.'
+            ],
+            [
+                'Repairs',
+                'Planned diagnostics and phone, tablet and computer repair services.'
+            ],
+            [
+                'Support',
+                'Customer service, FAQs and contact forms are planned.'
+            ]
         ]
     },
 
     fr: {
+
         home: 'Accueil',
+
+        contactNav: 'Nous joindre',
+
         eyebrow: 'BIENTÔT DISPONIBLE • CANADA',
+
         headline: 'Une nouvelle façon de rester connecté.',
+
         intro: 'TriLink Wireless prépare une nouvelle expérience pour la mobilité, Internet, les appareils et la connectivité des entreprises.',
+
         cta: 'Découvrir les services prévus',
+
         heading: 'Tout est connecté.',
+
         sub: 'Découvrez nos projets. Tous les services sont actuellement en développement.',
+
         status: 'Bientôt disponible',
+
         faq: 'Quand aura lieu le lancement?',
+
         answer: 'La date de lancement reste à annoncer. Les forfaits, la couverture, les tarifs et les moyens de joindre notre équipe seront communiqués dès que possible. Les commandes, les réparations et les inscriptions ne sont pas encore ouvertes.',
-        foot: '© 2026 TriLink Wireless. Information de prélancement uniquement.',
+
+        foot: '© 2026 TriLink Wireless. Tous droits réservés. Information de prélancement uniquement.',
+
         futureTitle: 'Notre vision pour l’avenir',
+
+        contactEyebrow: 'RESTEZ CONNECTÉ',
+
+        contactTitle: 'Communiquez avec TriLink Wireless',
+
+        contactIntro: 'Vous avez une question, une demande commerciale ou une proposition de partenariat? Communiquez avec nous par nos canaux officiels.',
+
+        emailTitle: 'Courriel',
+
+        emailButton: 'Envoyer un courriel',
+
+        whatsappText: 'Communiquez avec nous sur WhatsApp pour toute demande générale.',
+
+        whatsappButton: 'Envoyer un message',
+
+        websiteTitle: 'Site Web officiel',
+
+        socialTitle: 'Suivez-nous',
+
+        socialIntro: 'Suivez nos comptes officiels sur les réseaux sociaux pour découvrir nos nouvelles, nos annonces et les mises à jour de nos futurs services.',
+
+        footerDescription: 'Une nouvelle expérience de connectivité pour le Canada.',
+
+        footerContact: 'Coordonnées',
+
+        footerSocial: 'Réseaux sociaux',
+
         futureItems: [
             'Télévision et médias',
             'IA et technologie',
             'Audio et divertissement'
         ],
+
         items: [
-            ['Mobilité', 'Cartes SIM, eSIM et forfaits mobiles.'],
-            ['Internet', 'Internet résidentiel et fibre, selon la disponibilité.'],
-            ['Entreprises', 'Internet et solutions de télécommunications pour entreprises.'],
-            ['Appareils', 'Téléphones, tablettes et accessoires.'],
-            ['Espace client', 'Gérez vos comptes, factures et abonnements après le lancement.'],
-            ['Réparations', 'Services prévus de diagnostic et de réparation de téléphones, tablettes et ordinateurs.'],
-            ['Assistance', 'Service à la clientèle, FAQ et formulaires de contact prévus.']
+            [
+                'Mobilité',
+                'Cartes SIM, eSIM et forfaits mobiles.'
+            ],
+            [
+                'Internet',
+                'Internet résidentiel et fibre, selon la disponibilité.'
+            ],
+            [
+                'Entreprises',
+                'Internet et solutions de télécommunications pour entreprises.'
+            ],
+            [
+                'Appareils',
+                'Téléphones, tablettes et accessoires.'
+            ],
+            [
+                'Espace client',
+                'Gérez vos comptes, factures et abonnements après le lancement.'
+            ],
+            [
+                'Réparations',
+                'Services prévus de diagnostic et de réparation de téléphones, tablettes et ordinateurs.'
+            ],
+            [
+                'Assistance',
+                'Service à la clientèle, FAQ et formulaires de contact prévus.'
+            ]
         ]
     }
 };
@@ -500,21 +1117,30 @@ const data = {
 let lang = 'en';
 
 try {
+
     if (localStorage.getItem('trilink-language') === 'fr') {
         lang = 'fr';
     }
+
 } catch (error) {}
 
 const links = document.getElementById('links');
+
 const menuButton = document.getElementById('menuButton');
 
 function closeMenu() {
+
     links.classList.remove('open');
+
     menuButton.setAttribute('aria-expanded', 'false');
+
     menuButton.textContent = '☰';
+
     menuButton.setAttribute(
         'aria-label',
-        lang === 'en' ? 'Open menu' : 'Ouvrir le menu'
+        lang === 'en'
+            ? 'Open menu'
+            : 'Ouvrir le menu'
     );
 }
 
@@ -523,9 +1149,11 @@ function render() {
     const d = data[lang];
 
     document.documentElement.lang = lang;
+
     document.title = 'TriLink Wireless | ' + d.status;
 
     const fields = [
+
         'eyebrow',
         'headline',
         'intro',
@@ -535,47 +1163,83 @@ function render() {
         'faq',
         'answer',
         'foot',
-        'futureTitle'
+        'futureTitle',
+        'contactEyebrow',
+        'contactTitle',
+        'contactIntro',
+        'emailTitle',
+        'emailButton',
+        'whatsappText',
+        'whatsappButton',
+        'websiteTitle',
+        'socialTitle',
+        'socialIntro',
+        'footerDescription',
+        'footerContact',
+        'footerSocial'
+
     ];
 
     fields.forEach(key => {
+
         document.getElementById(key).textContent = d[key];
+
     });
 
     links.innerHTML =
+
         `<a href="#home">${d.home}</a>` +
+
         d.items.map((item, i) =>
+
             `<a href="#${ids[i]}">${item[0]}</a>`
-        ).join('');
+
+        ).join('') +
+
+        `<a href="#contact">${d.contactNav}</a>`;
 
     document.getElementById('services').innerHTML =
+
         d.items.map((item, i) => `
+
             <article class="tile" id="${ids[i]}">
 
                 ${images[i] ? `
+
                     <img src="./${images[i]}"
                          alt=""
                          loading="lazy">
+
                 ` : ''}
 
-                <span class="num">0${i + 1}</span>
+                <span class="num">
+                    0${i + 1}
+                </span>
 
                 <h3>${item[0]}</h3>
+
                 <p>${item[1]}</p>
 
-                <span class="status">${d.status}</span>
+                <span class="status">
+                    ${d.status}
+                </span>
 
             </article>
+
         `).join('');
 
     const futureImages = [
+
         'media.jpg',
         'technology.jpg',
         'audio.jpg'
+
     ];
 
     document.getElementById('futureGrid').innerHTML =
+
         futureImages.map((file, i) => `
+
             <article class="tile">
 
                 <img src="./${file}"
@@ -584,9 +1248,12 @@ function render() {
 
                 <h3>${d.futureItems[i]}</h3>
 
-                <span class="status">${d.status}</span>
+                <span class="status">
+                    ${d.status}
+                </span>
 
             </article>
+
         `).join('');
 
     const languageButton = document.getElementById('lang');
@@ -595,14 +1262,19 @@ function render() {
         lang === 'en' ? 'FR' : 'EN';
 
     languageButton.setAttribute(
+
         'aria-label',
+
         lang === 'en'
             ? 'Afficher en français'
             : 'View in English'
+
     );
 
     links.querySelectorAll('a').forEach(link => {
+
         link.addEventListener('click', closeMenu);
+
     });
 
     closeMenu();
@@ -613,7 +1285,9 @@ document.getElementById('lang').onclick = () => {
     lang = lang === 'en' ? 'fr' : 'en';
 
     try {
+
         localStorage.setItem('trilink-language', lang);
+
     } catch (error) {}
 
     render();
@@ -623,20 +1297,30 @@ menuButton.onclick = () => {
 
     const open = links.classList.toggle('open');
 
-    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.setAttribute(
+        'aria-expanded',
+        String(open)
+    );
+
     menuButton.textContent = open ? '✕' : '☰';
 
     menuButton.setAttribute(
+
         'aria-label',
+
         lang === 'en'
             ? (open ? 'Close menu' : 'Open menu')
             : (open ? 'Fermer le menu' : 'Ouvrir le menu')
+
     );
 };
 
 document.addEventListener('keydown', event => {
+
     if (event.key === 'Escape') {
+
         closeMenu();
+
     }
 });
 
