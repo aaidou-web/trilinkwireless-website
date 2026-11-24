@@ -1,3 +1,648 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="TriLink Wireless — Canadian connectivity, coming soon."><link rel="icon" href="assets/symbol.png"><title>TriLink Wireless | Coming Soon</title><style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.6 system-ui,sans-serif;color:#14243b;background:#f5f8fc}header{background:white;border-bottom:1px solid #dce5ef}nav,main,footer{max-width:1200px;margin:auto;padding:24px}nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}.brand{font-size:25px;font-weight:850;letter-spacing:-1px;margin-right:auto}.brand b{color:#0865d8}nav a:not(.brand){font-size:14px}button,.cta{border:0;border-radius:8px;padding:12px 20px;background:#0964d9;color:white;font:inherit;font-weight:650;cursor:pointer}.hero{background:radial-gradient(ellipse at 90% 20%,#145ba9,transparent 55%),#081c38;color:white;padding:80px 24px}.hero>div{max-width:1152px;margin:auto}.eyebrow{font-size:13px;letter-spacing:2px;font-weight:750;color:#a9d8ff}h1{font-size:clamp(40px,7vw,78px);line-height:1.05;letter-spacing:-2px;max-width:850px;margin:20px 0}h2{font-size:32px;line-height:1.2}p{max-width:720px}.hero p{font-size:20px;color:#dbeaff;margin-bottom:32px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:18px}.tile{background:white;border:1px solid #dce5ef;border-radius:16px;padding:26px;scroll-margin-top:20px}.tile h3{font-size:22px;margin:12px 0}.tile p{color:#52637b}.num{color:#0964d9;font-weight:800;font-size:14px}.status{display:inline-block;background:#e9f2ff;color:#1254a2;border-radius:20px;padding:4px 12px;font-size:12px;font-weight:700}.note{margin:32px 0;padding:24px;background:#e7effa;border-radius:12px}footer{border-top:1px solid #dce5ef;color:#52637b;font-size:14px}a:focus-visible,button:focus-visible{outline:3px solid #f0a32b;outline-offset:4px} .brand{display:flex;align-items:center;gap:8px}.brand img:first-child{width:48px}.brand img:last-child{width:126px}.hero>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,340px);gap:32px;align-items:center}.hero-logo{width:100%;border-radius:24px}.tile img{height:85px;max-width:100%;object-fit:contain;display:block;margin-bottom:16px}.future{margin:48px 0}.future img{width:100%;border-radius:12px}.future h3{margin:8px 0}.cta,button{background:#a93620}.hero{background:radial-gradient(ellipse at 90% 20%,#7c302c,transparent 65%),#081c38}.footer-logo{width:120px;display:block;margin-bottom:12px}@media(max-width:700px){.hero>div{grid-template-columns:1fr}.hero-logo{max-width:240px}.hero{padding:48px 24px}} </style></head><body><header><nav><a class="brand" href="#home"><img src="assets/symbol.png" alt=""><img src="assets/wordmark.png" alt="TriLink Wireless"></a><span id="links" style="display:contents"></span><button id="lang" type="button" aria-label="Changer la langue">FR</button></nav></header><section class="hero" id="home"><div><div><span class="eyebrow" id="eyebrow"></span><h1 id="headline"></h1><p id="intro"></p><a class="cta" href="#services" id="cta"></a></div><img class="hero-logo" src="assets/telecom.png" alt="TriLink Wireless"></div></section><main><h2 id="heading" ></h2><p id="sub"></p><div class="grid" id="services"></div><section class="future"><h2 id="futureTitle"></h2><div class="grid" id="futureGrid"></div></section><section class="note"><h2 id="faq"></h2><p id="answer"></p></section></main><footer><img class="footer-logo" src="assets/original.png" alt="TriLink Wireless"><strong>TriLink Wireless</strong> · Ottawa, Ontario, Canada<p id="foot"></p></footer><script>
-const ids=['mobile','internet','business','devices','portal','repairs','support'];const data={en:{home:'Home',eyebrow:'COMING SOON • CANADA',headline:'A new way to stay connected.',intro:'TriLink Wireless is preparing a new experience for mobile, internet, devices and business connectivity.',cta:'Explore planned services',heading:'Everything connected.',sub:'Explore what we are working toward. All services are currently in development.',status:'Coming soon',faq:'When will we launch?',answer:'Our launch date has not yet been announced. Plans, coverage, pricing and support channels will be shared when available. Orders, repairs and account registration are not open yet.',foot:'© 2026 TriLink Wireless. Pre-launch information only.',items:[['Mobile','SIM cards, eSIMs and mobile plans.'],['Internet','Home internet and fibre options, subject to availability.'],['Business','Business internet and telecommunications solutions.'],['Devices','Phones, tablets and accessories.'],['Customer Portal','Manage accounts, bills and subscriptions when launched.'],['Repairs','Planned diagnostics and phone, tablet and computer repair services.'],['Support','Customer service, FAQs and contact forms are planned.']]},fr:{home:'Accueil',eyebrow:'BIENTÔT DISPONIBLE • CANADA',headline:'Une nouvelle façon de rester connecté.',intro:'TriLink Wireless prépare une nouvelle expérience pour la mobilité, Internet, les appareils et la connectivité des entreprises.',cta:'Découvrir les services prévus',heading:'Tout est connecté.',sub:'Découvrez nos projets. Tous les services sont actuellement en développement.',status:'Bientôt disponible',faq:'Quand aura lieu le lancement?',answer:'La date de lancement reste à annoncer. Les forfaits, la couverture, les tarifs et les moyens de joindre notre équipe seront communiqués dès que possible. Les commandes, les réparations et les inscriptions ne sont pas encore ouvertes.',foot:'© 2026 TriLink Wireless. Information de prélancement uniquement.',items:[['Mobilité','Cartes SIM, eSIM et forfaits mobiles.'],['Internet','Internet résidentiel et fibre, selon la disponibilité.'],['Entreprises','Internet et solutions de télécommunications pour entreprises.'],['Appareils','Téléphones, tablettes et accessoires.'],['Espace client','Gérez vos comptes, factures et abonnements après le lancement.'],['Réparations','Services prévus de diagnostic et de réparation de téléphones, tablettes et ordinateurs.'],['Assistance','Service à la clientèle, FAQ et formulaires de contact prévus.']]}};let lang='en';function render(){const d=data[lang];document.documentElement.lang=lang;document.title='TriLink Wireless | '+d.status;for(const k of ['eyebrow','headline','intro','cta','heading','sub','faq','answer','foot'])document.getElementById(k).textContent=d[k];document.getElementById('links').innerHTML='<a href="#home">'+d.home+'</a>'+d.items.map((x,i)=>`<a href="#${ids[i]}">${x[0]}</a>`).join('');document.getElementById('services').innerHTML=d.items.map((x,i)=>`<article class="tile" id="${ids[i]}">${i<3?`<img src="assets/${['mobile.png','telecom.png','technology.jpg'][i]}" alt="">`:''}<span class="num">0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p><span class="status">${d.status}</span></article>`).join('');document.getElementById('futureTitle').textContent=lang==='en'?'Our future vision':'Notre vision pour l’avenir';document.getElementById('futureGrid').innerHTML=['media.jpg','technology.jpg','audio.jpg'].map((f,i)=>`<article class="tile"><img style="height:auto" src="assets/${f}" alt=""><h3>${(lang==='en'?['TV & media','AI & technology','Audio & entertainment']:['Télévision et médias','IA et technologie','Audio et divertissement'])[i]}</h3><span class="status">${d.status}</span></article>`).join('');const b=document.getElementById('lang');b.textContent=lang==='en'?'FR':'EN';b.setAttribute('aria-label',lang==='en'?'Afficher en français':'View in English')}document.getElementById('lang').onclick=()=>{lang=lang==='en'?'fr':'en';render()};render();</script></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="TriLink Wireless — Canadian connectivity, coming soon.">
+<link rel="icon" type="image/png" href="./symbol.png">
+<title>TriLink Wireless | Coming Soon</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font: 16px/1.6 system-ui, sans-serif;
+    color: #14243b;
+    background: #f5f8fc;
+}
+
+header {
+    background: white;
+    border-bottom: 1px solid #dce5ef;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav, main, footer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+.brand .symbol {
+    width: 45px;
+    height: auto;
+}
+
+.brand .wordmark {
+    width: 130px;
+    height: auto;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#links a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+button, .cta {
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    background: #a93620;
+    color: white;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.cta {
+    display: inline-block;
+}
+
+#menuButton {
+    display: none;
+    background: #081c38;
+    padding: 8px 14px;
+    font-size: 24px;
+}
+
+.hero {
+    background: radial-gradient(
+        ellipse at 90% 20%,
+        #7c302c,
+        transparent 65%
+    ), #081c38;
+    color: white;
+    padding: 80px 24px;
+    scroll-margin-top: 120px;
+}
+
+.hero-inner {
+    max-width: 1152px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+    gap: 32px;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 2px;
+    font-weight: 750;
+    color: #a9d8ff;
+}
+
+h1 {
+    font-size: clamp(38px, 6vw, 78px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+p {
+    max-width: 720px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #dbeaff;
+    margin-bottom: 32px;
+}
+
+.hero-logo {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(245px, 100%), 1fr));
+    gap: 18px;
+}
+
+.tile {
+    background: white;
+    border: 1px solid #dce5ef;
+    border-radius: 16px;
+    padding: 26px;
+    scroll-margin-top: 130px;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.tile:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(8, 28, 56, .08);
+}
+
+.tile h3 {
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.tile p {
+    color: #52637b;
+}
+
+.tile img {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.num {
+    color: #0964d9;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.status {
+    display: inline-block;
+    background: #e9f2ff;
+    color: #1254a2;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.future {
+    margin: 48px 0;
+}
+
+.future img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.note {
+    margin: 32px 0;
+    padding: 24px;
+    background: #e7effa;
+    border-radius: 12px;
+}
+
+footer {
+    border-top: 1px solid #dce5ef;
+    color: #52637b;
+    font-size: 14px;
+}
+
+.footer-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #f0a32b;
+    outline-offset: 4px;
+}
+
+#services {
+    scroll-margin-top: 130px;
+}
+
+@media (max-width: 1050px) {
+
+    nav {
+        flex-wrap: wrap;
+        padding: 16px 20px;
+        gap: 10px;
+    }
+
+    #menuButton {
+        display: block;
+    }
+
+    #links {
+        display: none;
+        width: 100%;
+        order: 4;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    #links.open {
+        display: flex;
+    }
+
+    #links a {
+        padding: 12px;
+        border-top: 1px solid #e7effa;
+        font-size: 16px;
+    }
+
+    #lang {
+        padding: 10px 14px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .hero-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 48px 24px;
+    }
+
+    .hero-logo {
+        max-width: 260px;
+        margin: 12px auto 0;
+    }
+
+    .brand .symbol {
+        width: 35px;
+    }
+
+    .brand .wordmark {
+        width: 105px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .tile {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a class="brand" href="#home">
+            <img class="symbol"
+                 src="./symbol.png"
+                 alt="">
+            <img class="wordmark"
+                 src="./wordmark.png"
+                 alt="TriLink Wireless">
+        </a>
+
+        <div id="links"></div>
+
+        <button id="lang"
+                type="button"
+                aria-label="Afficher en français">
+            FR
+        </button>
+
+        <button id="menuButton"
+                type="button"
+                aria-label="Open menu"
+                aria-controls="links"
+                aria-expanded="false">
+            ☰
+        </button>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-inner">
+        <div>
+            <span class="eyebrow" id="eyebrow"></span>
+            <h1 id="headline"></h1>
+            <p id="intro"></p>
+            <a class="cta" href="#services" id="cta"></a>
+        </div>
+
+        <img class="hero-logo"
+             src="./telecom.png"
+             alt="TriLink Wireless">
+    </div>
+</section>
+
+<main>
+
+    <h2 id="heading"></h2>
+    <p id="sub"></p>
+
+    <div class="grid" id="services"></div>
+
+    <section class="future">
+        <h2 id="futureTitle"></h2>
+        <div class="grid" id="futureGrid"></div>
+    </section>
+
+    <section class="note">
+        <h2 id="faq"></h2>
+        <p id="answer"></p>
+    </section>
+
+</main>
+
+<footer>
+    <img class="footer-logo"
+         src="./original.png"
+         alt="TriLink Wireless">
+
+    <strong>TriLink Wireless</strong>
+    · Ottawa, Ontario, Canada
+
+    <p id="foot"></p>
+</footer>
+
+<script>
+
+const ids = [
+    'mobile',
+    'internet',
+    'business',
+    'devices',
+    'portal',
+    'repairs',
+    'support'
+];
+
+const images = [
+    'mobile.png',
+    'telecom.png',
+    'technology.jpg',
+    null,
+    null,
+    null,
+    null
+];
+
+const data = {
+
+    en: {
+        home: 'Home',
+        eyebrow: 'COMING SOON • CANADA',
+        headline: 'A new way to stay connected.',
+        intro: 'TriLink Wireless is preparing a new experience for mobile, internet, devices and business connectivity.',
+        cta: 'Explore planned services',
+        heading: 'Everything connected.',
+        sub: 'Explore what we are working toward. All services are currently in development.',
+        status: 'Coming soon',
+        faq: 'When will we launch?',
+        answer: 'Our launch date has not yet been announced. Plans, coverage, pricing and support channels will be shared when available. Orders, repairs and account registration are not open yet.',
+        foot: '© 2026 TriLink Wireless. Pre-launch information only.',
+        futureTitle: 'Our future vision',
+        futureItems: [
+            'TV & media',
+            'AI & technology',
+            'Audio & entertainment'
+        ],
+        items: [
+            ['Mobile', 'SIM cards, eSIMs and mobile plans.'],
+            ['Internet', 'Home internet and fibre options, subject to availability.'],
+            ['Business', 'Business internet and telecommunications solutions.'],
+            ['Devices', 'Phones, tablets and accessories.'],
+            ['Customer Portal', 'Manage accounts, bills and subscriptions when launched.'],
+            ['Repairs', 'Planned diagnostics and phone, tablet and computer repair services.'],
+            ['Support', 'Customer service, FAQs and contact forms are planned.']
+        ]
+    },
+
+    fr: {
+        home: 'Accueil',
+        eyebrow: 'BIENTÔT DISPONIBLE • CANADA',
+        headline: 'Une nouvelle façon de rester connecté.',
+        intro: 'TriLink Wireless prépare une nouvelle expérience pour la mobilité, Internet, les appareils et la connectivité des entreprises.',
+        cta: 'Découvrir les services prévus',
+        heading: 'Tout est connecté.',
+        sub: 'Découvrez nos projets. Tous les services sont actuellement en développement.',
+        status: 'Bientôt disponible',
+        faq: 'Quand aura lieu le lancement?',
+        answer: 'La date de lancement reste à annoncer. Les forfaits, la couverture, les tarifs et les moyens de joindre notre équipe seront communiqués dès que possible. Les commandes, les réparations et les inscriptions ne sont pas encore ouvertes.',
+        foot: '© 2026 TriLink Wireless. Information de prélancement uniquement.',
+        futureTitle: 'Notre vision pour l’avenir',
+        futureItems: [
+            'Télévision et médias',
+            'IA et technologie',
+            'Audio et divertissement'
+        ],
+        items: [
+            ['Mobilité', 'Cartes SIM, eSIM et forfaits mobiles.'],
+            ['Internet', 'Internet résidentiel et fibre, selon la disponibilité.'],
+            ['Entreprises', 'Internet et solutions de télécommunications pour entreprises.'],
+            ['Appareils', 'Téléphones, tablettes et accessoires.'],
+            ['Espace client', 'Gérez vos comptes, factures et abonnements après le lancement.'],
+            ['Réparations', 'Services prévus de diagnostic et de réparation de téléphones, tablettes et ordinateurs.'],
+            ['Assistance', 'Service à la clientèle, FAQ et formulaires de contact prévus.']
+        ]
+    }
+};
+
+let lang = 'en';
+
+try {
+    if (localStorage.getItem('trilink-language') === 'fr') {
+        lang = 'fr';
+    }
+} catch (error) {}
+
+const links = document.getElementById('links');
+const menuButton = document.getElementById('menuButton');
+
+function closeMenu() {
+    links.classList.remove('open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.textContent = '☰';
+    menuButton.setAttribute(
+        'aria-label',
+        lang === 'en' ? 'Open menu' : 'Ouvrir le menu'
+    );
+}
+
+function render() {
+
+    const d = data[lang];
+
+    document.documentElement.lang = lang;
+    document.title = 'TriLink Wireless | ' + d.status;
+
+    const fields = [
+        'eyebrow',
+        'headline',
+        'intro',
+        'cta',
+        'heading',
+        'sub',
+        'faq',
+        'answer',
+        'foot',
+        'futureTitle'
+    ];
+
+    fields.forEach(key => {
+        document.getElementById(key).textContent = d[key];
+    });
+
+    links.innerHTML =
+        `<a href="#home">${d.home}</a>` +
+        d.items.map((item, i) =>
+            `<a href="#${ids[i]}">${item[0]}</a>`
+        ).join('');
+
+    document.getElementById('services').innerHTML =
+        d.items.map((item, i) => `
+            <article class="tile" id="${ids[i]}">
+
+                ${images[i] ? `
+                    <img src="./${images[i]}"
+                         alt=""
+                         loading="lazy">
+                ` : ''}
+
+                <span class="num">0${i + 1}</span>
+
+                <h3>${item[0]}</h3>
+                <p>${item[1]}</p>
+
+                <span class="status">${d.status}</span>
+
+            </article>
+        `).join('');
+
+    const futureImages = [
+        'media.jpg',
+        'technology.jpg',
+        'audio.jpg'
+    ];
+
+    document.getElementById('futureGrid').innerHTML =
+        futureImages.map((file, i) => `
+            <article class="tile">
+
+                <img src="./${file}"
+                     alt=""
+                     loading="lazy">
+
+                <h3>${d.futureItems[i]}</h3>
+
+                <span class="status">${d.status}</span>
+
+            </article>
+        `).join('');
+
+    const languageButton = document.getElementById('lang');
+
+    languageButton.textContent =
+        lang === 'en' ? 'FR' : 'EN';
+
+    languageButton.setAttribute(
+        'aria-label',
+        lang === 'en'
+            ? 'Afficher en français'
+            : 'View in English'
+    );
+
+    links.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    closeMenu();
+}
+
+document.getElementById('lang').onclick = () => {
+
+    lang = lang === 'en' ? 'fr' : 'en';
+
+    try {
+        localStorage.setItem('trilink-language', lang);
+    } catch (error) {}
+
+    render();
+};
+
+menuButton.onclick = () => {
+
+    const open = links.classList.toggle('open');
+
+    menuButton.setAttribute('aria-expanded', String(open));
+    menuButton.textContent = open ? '✕' : '☰';
+
+    menuButton.setAttribute(
+        'aria-label',
+        lang === 'en'
+            ? (open ? 'Close menu' : 'Open menu')
+            : (open ? 'Fermer le menu' : 'Ouvrir le menu')
+    );
+};
+
+document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+        closeMenu();
+    }
+});
+
+render();
+
+</script>
+
+</body>
+</html>
